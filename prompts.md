@@ -1,19 +1,22 @@
-heed: ii
 hid: ih
-hayed: ei
 head: eh
 had: ae
-hod: ah
-hawed: aw
-hud: uh
-hoed: oh
-hood: oo
-who’d: uu
-
-how’d: au
-hoyed: oi
-hide: ai
-height: ait
-herd: er
-hard: ar
 ahead: xx
+hud: uh
+hood: oo
+hod: ah
+
+heed: ii
+herd: er
+hawed: aw
+hard: ar
+
+
+hayed: ei
+how’d: au
+hide: ai
+
+who’d: uu
+hoyed: oi
+hoed: oh
+

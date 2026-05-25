@@ -4,7 +4,7 @@ library(zoo)
 rm(list = ls())
 
 # set the path where your formant table lives
-setwd("/Users/koseioki/Desktop/vowel")
+setwd("/Users/koseioki/Documents/Projects/vowels")
 
 df <- read.csv("formants.Table", stringsAsFactors = FALSE) 
 
@@ -29,26 +29,26 @@ df <- read.csv("formants.Table", stringsAsFactors = FALSE)
 # https://en.wikipedia.org/wiki/Phonetic_symbols_in_Unicode#Vowels
 vowel_lookup = 
            c(`ae` = "\u00E6",         # cat
-             `ah` = "\u0251",         # cot
-             `aw` = "\u0254",         # caught
+             `ah` = "\u0252",         # cot
+             `aw` = "\u0254\u02D0",         # caught
              `ai` = "\u0251\u026A",   # ride
              `ait` = "\u0251\u026At", # right
              `au` = "a\u028A",        # cloud
-             `eh` = "\u025B",         # bet
+             `eh` = "e",         # bet
              `ei` = "e\u026A",        # rate
              `ih` = "\u026A",         # bit
-             `ii` = "i",              # beat
+             `ii` = "i\u02D0",              # beat
              `oh` = "o\u028A",        # boat
              `oo` = "\u028A",         # cook
              `uh` = "\u028C",         # cut
-             `uu` = "u",              # tooth
+             `uu` = "u\u02D0",              # tooth
              `xx` = "\u0259",         # a(head)
-             `er` = "\u025D",         # bird
+             `er` = "\u025B\u02D0",         # bird
              `eir` = "e\u026Ar",      # mary
              `ehr` = "\u025Br",       # merry
              `aer` = "\u00E6r",       # marry
              `cr` = "\u0254r",        # more
-             `ar` = "\u0251r",        # far
+             `ar` = "\u0251\u02D0",        # far
              `oi` = "\u0254\u026A"    # joy
              )
 
@@ -62,8 +62,8 @@ df$IPA <- vowel_lookup[df$vowel]
 exclude_these_Vs <- as.character("")
 
 # for most vowel plots, I want to leave these out. 
-exclude_these_Vs <- 
-  c("cr","er","ar", "xx")
+# exclude_these_Vs <- 
+#   c("cr","er","ar", "xx")
 #================================================================#
 # if you recorded multiple versions of the same vowel,
 # then average over them here
